@@ -6,6 +6,7 @@ import Link from "next/link"
 import Sidebar from "@/components/side-bar"
 import { sdgData } from "@/data/sdg-data"
 import AboutSection from "@/components/about-section"
+import { assetPath } from "@/lib/asset-path"
 
 export default function Home() {
   const mainContentRef = useRef<HTMLDivElement>(null)
@@ -43,7 +44,7 @@ export default function Home() {
                   <div className="flex items-center gap-4 mb-4">
                     <div className="w-16 h-16 rounded-lg overflow-hidden shadow-md shrink-0">
                       <Image
-                        src={`/sdg-logos/E_WEB_INVERTED_${sdg.number.toString().padStart(2, "0")}.png`}
+                        src={assetPath(`/sdg-logos/E_WEB_INVERTED_${sdg.number.toString().padStart(2, "0")}.png`)}
                         alt={`SDG ${sdg.number}`}
                         width={64}
                         height={64}
@@ -85,7 +86,7 @@ export default function Home() {
           <div className="max-w-6xl mx-auto">
             <div className="h-26 relative w-48">
               <Image 
-                src="/contents/T.I.P. Logo HD.png" 
+                src={assetPath("/contents/T.I.P. Logo HD.png")}
                 alt="T.I.P. Logo" 
                 fill
                 className="object-contain object-left"
