@@ -1,8 +1,7 @@
+# The site is hosted on Render (see render.yaml). This is a manual fallback for GitHub Pages.
 name: Deploy to GitHub Pages
 
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:
