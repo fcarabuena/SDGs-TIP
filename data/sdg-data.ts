@@ -88,24 +88,24 @@ export const sdgData: SDG[] = [
         none("2.1.3", "Zero Hunger: publications"),
       ]),
       target("2.2", "2.2 Campus food waste", [
-        doc("2.2.1", "Campus food waste tracking", "1Z7hjF4XGIkaX3Z5YD5aBOsW4JzZG7do2"),
-        doc("2.2.2", "Campus food waste", "1s7AKFm7xcqzZeKUDkyBmZN5zMzUO3kaF"),
+        doc("2.2.1", "Campus food waste tracking", "1ZBgcCjVkGqnDl5Ejg57YY25GSiYvwi-J"),
+        doc("2.2.2", "Campus food waste", "1JNW29QkjHimp1Rob-jZ3bSG6l_HgUMWi"),
       ]),
       target("2.3", "2.3 Student hunger", [
         none("2.3.1", "Student food insecurity and hunger"),
         none("2.3.2", "Students hunger interventions"),
-        doc("2.3.3", "Sustainable food choices on campus", "1s3OERhCQtQHEwi4mM9DBiEt-suBBFVHl"),
-        doc("2.3.4", "Healthy and affordable food choices", "1t8vmKm4SuCIOd_lXG4yH765ZlK99Hlyi"),
-        doc("2.3.5", "Staff hunger interventions", "16PlDCrkfI1zsTnV3Vq-8rVBXW-U_O3c5"),
+        doc("2.3.3", "Sustainable food choices on campus", "16I_uT5pBTW2DPi__dpCRsGiB_8f9_2UI"),
+        doc("2.3.4", "Healthy and affordable food choices", "1HcG315JrMgSVEiCQcj1SOYOFBOmo9l4T"),
+        doc("2.3.5", "Staff hunger interventions", "12oMfKP8ImHKQdOtnzBg14FYknC9trLKH"),
       ]),
       target("2.4", "2.4 Proportion of graduates in agriculture and aquaculture including sustainability aspects", [
         none("2.4.1", "Proportion of graduates in agriculture and aquaculture"),
       ]),
       target("2.5", "2.5 National hunger", [
-        doc("2.5.1", "Access to food security knowledge", "1owYs7oQ9_Re4sn_32nWZSbYrHqnoA6t-"),
-        doc("2.5.2", "Events for local farmers and food producers", "141rtpJVmkEWHRkKPuZmst2UgjVYk_D8d"),
+        doc("2.5.1", "Access to food security knowledge", "1o9W9EPCxexceLXyjhq2QeOC3NL-2i8Am"),
+        doc("2.5.2", "Events for local farmers and food producers", "1-tXxqcct9f2MNkegDnxryDODKtsbGPGd"),
         review("2.5.3", "University access to local farmers and food producers"),
-        doc("2.5.4", "Sustainable food purchases", "1ELjBtEVepL5woCbXDhkULyvDqAdAnbdH"),
+        doc("2.5.4", "Sustainable food purchases", "1DPqpDybg-Mmlu6P_CR5pz4DhnI6vArxM"),
       ]),
     ],
   },
@@ -143,22 +143,22 @@ export const sdgData: SDG[] = [
       "T.I.P. upholds its mission to transform students into globally competitive professionals through outcomes-based education, continuous faculty development, research integration, and lifelong learning opportunities.",
     targets: [
       target("4.1", "4.1 Research on early years and lifelong learning education", [
-        doc("4.1.1", "Quality Education: paper views", "1zZer_7f4WunhnfdFTBM6kXCis9qKOOh3"),
-        doc("4.1.2", "Quality Education: CiteScore", "1zZer_7f4WunhnfdFTBM6kXCis9qKOOh3"),
-        doc("4.1.3", "Quality Education: publications", "1zZer_7f4WunhnfdFTBM6kXCis9qKOOh3"),
+        doc("4.1.1", "Quality Education: paper views", "191Klby7bYmauZgDVHcP_P6fiJkZgzzpe"),
+        doc("4.1.2", "Quality Education: CiteScore", "191Klby7bYmauZgDVHcP_P6fiJkZgzzpe"),
+        doc("4.1.3", "Quality Education: publications", "191Klby7bYmauZgDVHcP_P6fiJkZgzzpe"),
       ]),
       target("4.2", "4.2 Proportion of graduates with teaching qualification", [
         none("4.2.1", "Proportion of graduates with relevant qualification for teaching"),
       ]),
       target("4.3", "4.3 Lifelong learning measures", [
-        doc("4.3.1", "Public resources (lifelong learning)", "1wzxlx2A_pA_4sZFkJIkp07br3GptPwyb"),
-        doc("4.3.2", "Public events (lifelong learning)", "1wujLWCCf6J7Ek2--Tb8AmIh99p1im3aE"),
-        doc("4.3.3", "Vocational training events (lifelong learning)", "1BZsyQfiXI6HyDLps28W5VRYHzvDs1Fkq"),
-        doc("4.3.4", "Education outreach activities beyond campus", "18xJg_QvmEKFZ98bNGdNdM7wQOCuJUklo"),
-        doc("4.3.5", "Lifelong learning access policy", "144Ryt7QExL5Hrz4-Bo-NaB_zejUPSKV8"),
+        doc("4.3.1", "Public resources (lifelong learning)", "1MMj8Qk9fq_ZYPwtAF3fOWbdUE3Xu0hAn"),
+        doc("4.3.2", "Public events (lifelong learning)", "1C9_YPWLhSBo5F4EkdvROitXGMwKPlNuM"),
+        doc("4.3.3", "Vocational training events (lifelong learning)", "1HIXmDL18jrecsJVB_KdnOcdFV0Fb4RSd"),
+        doc("4.3.4", "Education outreach activities beyond campus", "1bab-HyN04rYb7jVgK7PaDRoqmGU0NxoW"),
+        doc("4.3.5", "Lifelong learning access policy", "1zFpvUcU-r_rz-zxcaIqcv9yGtMtMn39X"),
       ]),
       target("4.4", "4.4 Proportion of first-generation students", [
-        doc("4.4.1", "Proportion of first-generation students", "1j6yhKxffC10WvRVWMQHUs-Tkevucl2SX"),
+        doc("4.4.1", "Proportion of first-generation students", "17vMtmeKP8fJ86mXy-OdlvNuTqciBA2qN"),
       ]),
     ],
   },
@@ -208,9 +208,9 @@ export const sdgData: SDG[] = [
       "T.I.P. pledges to advance the transition toward 100% renewable energy use beyond campus operations while continuously improving energy efficiency across its laboratories, buildings, and offices. Guided by the Philippines’ Renewable Energy Act of 2008 and UN Sustainable Development Goal 7 (Affordable and Clean Energy), T.I.P. commits to integrating clean energy and sustainable practices in its operations, curriculum, research, and community partnerships. Through sustained advocacy, education, and innovation, T.I.P. reaffirms its role as a catalyst for the nation’s clean energy transformation and a model for sustainability in higher education.",
     targets: [
       target("7.1", "7.1 Research on clean energy", [
-        doc("7.1.1", "Affordable and Clean Energy: CiteScore", "1ywe4-dwTKTZhDlTGTevIiOoolewOOLmZ"),
-        doc("7.1.2", "Affordable and Clean Energy: FWCI", "1ywe4-dwTKTZhDlTGTevIiOoolewOOLmZ"),
-        doc("7.1.3", "Affordable and Clean Energy: publications", "1ywe4-dwTKTZhDlTGTevIiOoolewOOLmZ"),
+        doc("7.1.1", "Affordable and Clean Energy: CiteScore", "1cFFGLBuvITG0ViiO9zAEp9mWOEHgnhfm"),
+        doc("7.1.2", "Affordable and Clean Energy: FWCI", "1cFFGLBuvITG0ViiO9zAEp9mWOEHgnhfm"),
+        doc("7.1.3", "Affordable and Clean Energy: publications", "1cFFGLBuvITG0ViiO9zAEp9mWOEHgnhfm"),
       ]),
       target("7.2", "7.2 University measures towards affordable and clean energy", [
         review("7.2.1", "Energy-efficient renovation and building"),
@@ -221,17 +221,17 @@ export const sdgData: SDG[] = [
         review("7.2.6", "Divestment policy"),
       ]),
       target("7.3", "7.3 Energy use density", [
-        doc("7.3.1", "Energy usage per sqm", "1qMYOi6n6kku9-uYY5vyCmQ0seFd396G0"),
+        doc("7.3.1", "Energy usage per sqm", "1LuaTNdhm2nW4mq2wF8ce_Eln7IltxxSM"),
       ]),
       target("7.4", "7.4 Energy and the community", [
-        doc("7.4.1", "Local community outreach for energy efficiency", "1Tqciw35_bJSOi5c6svxD6jWMjDwRCwtj"),
-        doc("7.4.2", "100% renewable energy pledge", "1hSMPuEr5sJDxYrjSUJpOoTzft4LmmImp"),
-        doc("7.4.3", "Energy efficiency services for industry", "1P3FQBzT7qLX3mzMAIi6ID4TvdIbGnvk1"),
-        doc("7.4.4", "Policy development for clean energy technology", "1sO-hShPOzeh58KnRpYx0qMUoxlucqg-a"),
-        doc("7.4.5", "Assistance to low-carbon innovation", "1zwYXbBArWdREWrDY8W4YD5En4Ecxwqhg"),
+        doc("7.4.1", "Local community outreach for energy efficiency", "1-MLH9F1Ww8QQ1c0H0wEEPh7VSER8lmDA"),
+        doc("7.4.2", "100% renewable energy pledge", "1jGFqj-I0EYl--F0vTjyBVYtBs31a_6fZ"),
+        doc("7.4.3", "Energy efficiency services for industry", "1uC2q2jH_SLhwH3W7qZ2JNzk2YIulJ3N7"),
+        doc("7.4.4", "Policy development for clean energy technology", "1Dp6eHaIBfYdBrH8G7u9RYe6I9u_ZSoml"),
+        doc("7.4.5", "Assistance to low-carbon innovation", "1XJpv-KEVE2aKqXdnBrthI5hPxu3BaWp1"),
       ]),
       target("7.5", "7.5 Low-carbon energy use", [
-        doc("7.5.1", "Low-carbon energy use", "1Vi5Fq6TYSqJVnhBUuhVkd4_KsZHuPP-s"),
+        doc("7.5.1", "Low-carbon energy use", "1HWtYt3Ydkkl1uaOFxRwSWT4SXgNoSjAH"),
       ]),
     ],
   },
@@ -244,24 +244,24 @@ export const sdgData: SDG[] = [
     // 8.3.1 (Expenditure per employee) is intentionally not published.
     targets: [
       target("8.1", "", [
-        doc("8.1.2", "Decent Work and Economic Growth: publications", "1j3hHLLIps2pZOHbolziB1w36etomsfzh"),
+        doc("8.1.2", "Decent Work and Economic Growth: publications", "1ZfxY3VFvNuuYuqmuqreh5erGkYmCA1jT"),
       ]),
       target("8.2", "8.2 Employment practice", [
-        doc("8.2.1", "Employment practice living wage", "1bfSEnzQwusbHRPPPHWnWBUksJbr6nea5"),
-        doc("8.2.2", "Employment practice unions", "1P7f0iOdCy_fdlNtZX5ROMTZNuVpehQ-f"),
-        doc("8.2.3", "Employment policy on discrimination", "1Cn5lEhztINFHuAR5WckFl11rDbMVrS6p"),
-        doc("8.2.4", "Employment policy modern slavery", "1OoasjS_RnYbFDzft4wchbz9VH5SWoltA"),
-        doc("8.2.5", "Employment practice equivalent rights outsourcing", "1QyJnAZ4jqLHLA8La6WmubwIR5f29vtDi"),
-        doc("8.2.6", "Employment policy pay scale equity", "1hzTmumL7Y26EXa3CQSRPImR5R1VOGqVP"),
-        doc("8.2.7", "Tracking pay scale for gender equity", "1yNjI3raVP4Ta9pgrAhS6XoBLQLdoz2Pg"),
-        doc("8.2.8", "Employment practice appeal process", "1t41Xn28pJYloQZAgH5lnZlzzVP9ktOwp"),
-        doc("8.2.9", "Employment practice labour rights", "1p2jmAzHR9yBClxn5Oq9QqRKZlVD41U_f"),
+        doc("8.2.1", "Employment practice living wage", "1yTg7g0W-XbrZGs-r1t2CLxlTqbIc-_TE"),
+        doc("8.2.2", "Employment practice unions", "1fu4jXLUnrWTCzp17hfmbh6ZSiXAGzcBz"),
+        doc("8.2.3", "Employment policy on discrimination", "1EFN3DL0HABsPCV1bLiuuNJ_SJZ3BvB4D"),
+        doc("8.2.4", "Employment policy modern slavery", "12O4tert0d_4AHJsNSUW45EIyGZL9xLPB"),
+        doc("8.2.5", "Employment practice equivalent rights outsourcing", "1ebjkG0Ci728-Ovg6BXepf45_NBFlJDvT"),
+        doc("8.2.6", "Employment policy pay scale equity", "1HKbtnyIcuz45wfxL1VzordSoSFiMHUXr"),
+        doc("8.2.7", "Tracking pay scale for gender equity", "1d39vheu4JuHhQU0XM-Z6DNYAV-Zp_Vgl"),
+        doc("8.2.8", "Employment practice appeal process", "12WIKrFFE1jsbAD-38o8Z8ilqDMBvv8kU"),
+        doc("8.2.9", "Employment practice labour rights", "16rHUxAfjygTrv9NQMC4XqusiU_yW2SCK"),
       ]),
       target("8.4", "8.4 Proportion of students taking work placements", [
         review("8.4.1", "Proportion of students with work placements"),
       ]),
       target("8.5", "8.5 Proportion of employees on secure contracts", [
-        doc("8.5.1", "Proportion of employees on secure contracts", "1evVA7dMi0K53Nn1A8QaOYCtfN3mkxsc1"),
+        doc("8.5.1", "Proportion of employees on secure contracts", "1Z11sSgjACPIuOB3SVZ0JXOwSC-oDN81v"),
       ]),
     ],
   },
@@ -273,10 +273,10 @@ export const sdgData: SDG[] = [
       "T.I.P. commits to strengthening its Technopreneurship and Collaborative Research (TechnoCoRe) programs, developing innovative and sustainable laboratories, and driving innovation that supports resilient infrastructure and responsible industrial growth.",
     targets: [
       target("9.1", "", [
-        doc("9.1.1", "Industry, Innovation and Infrastructure: publications", "19To6ENcqkiWtG93AtDVq27gOQP24ZouG"),
+        doc("9.1.1", "Industry, Innovation and Infrastructure: publications", "1H4eMeWrCV1n5yD-etx_Uav4k78iNepDy"),
       ]),
       target("9.2", "", [
-        doc("9.2.1", "Number of patents citing research", "1O2LU3IH2EKCUEE0X_63zBJdrDwflr6kx"),
+        doc("9.2.1", "Number of patents citing research", "1eZlUygiMhXhl-xys_FQ2RT50NvUz7G-R"),
       ]),
     ],
   },
@@ -296,14 +296,14 @@ export const sdgData: SDG[] = [
       "T.I.P. pledges to make its campuses models of sustainability through green building initiatives, safe learning environments, disaster resilience planning, and community engagement in sustainable urban development.",
     targets: [
       target("11.1", "", [
-        doc("11.1.2", "Sustainable Cities and Communities: FWCI", "1HryVZw29IQWip_Xj8Xpp2JLd_TzvjIub"),
+        doc("11.1.2", "Sustainable Cities and Communities: FWCI", "1gOC2LuAOLIO-aqjIrxRlt-3PFgag_ykt"),
       ]),
       target("11.2", "", [
-        doc("11.2.3", "Public access to museums", "18WXETHmx6vBSM9hGwnbpkrYUKCM98IGV"),
+        doc("11.2.3", "Public access to museums", "1jNvwFqdE3dApmfgxLeU84tjaAgskj1VV"),
         review("11.2.5", "Arts and heritage contribution"),
       ]),
       target("11.4", "", [
-        doc("11.4.6", "Pedestrian priority on campus", "1oTtfiL_3lVuMZWpYXdz1XT0RKOXbRkLG"),
+        doc("11.4.6", "Pedestrian priority on campus", "1o-V1PyVW6eIbwIuw2ny-0j-jEgolKLf-"),
       ]),
     ],
   },
@@ -323,9 +323,9 @@ export const sdgData: SDG[] = [
       "T.I.P. pledges to reduce its environmental impact through energy conservation, greening initiatives, and climate education, while integrating disaster risk reduction and climate resilience into its institutional operations and curricula.",
     targets: [
       target("13.1", "13.1 Research on climate action", [
-        doc("13.1.1", "Climate Action: CiteScore", "1J3mYstqsXx6F0bjqGXFkw5l5r1EqPznG"),
-        doc("13.1.2", "Climate Action: FWCI (Field-Weighted Citation Impact)", "1J3mYstqsXx6F0bjqGXFkw5l5r1EqPznG"),
-        doc("13.1.3", "Climate Action: publications", "1J3mYstqsXx6F0bjqGXFkw5l5r1EqPznG"),
+        doc("13.1.1", "Climate Action: CiteScore", "1ChUuRAdEaEYrSg6OUNCtISdxoxZJv8nz"),
+        doc("13.1.2", "Climate Action: FWCI (Field-Weighted Citation Impact)", "1ChUuRAdEaEYrSg6OUNCtISdxoxZJv8nz"),
+        doc("13.1.3", "Climate Action: publications", "1ChUuRAdEaEYrSg6OUNCtISdxoxZJv8nz"),
       ]),
       target("13.2", "13.2 Low-carbon energy use", [
         review("13.2.1", "Low-carbon energy tracking"),
@@ -333,8 +333,8 @@ export const sdgData: SDG[] = [
       ]),
       target("13.3", "13.3 Environmental education measures", [
         review("13.3.1", "Local education programs on climate"),
-        doc("13.3.2", "Climate Action Plan, shared", "10_nVXH4-APgkgKVgelFR-ufmcNqeRojd"),
-        doc("13.3.3", "Co-operative planning for climate change disasters", "1kuZ2UVRNjwe5OL8vHI-jXRwl3tdVOtU4"),
+        doc("13.3.2", "Climate Action Plan, shared", "19RzLEy30gHI2phrrKenC1ech7vrTLpB7"),
+        doc("13.3.3", "Co-operative planning for climate change disasters", "1t0p_SCrBy7DUWYUJALB4PhIGXvOJFkfr"),
         none("13.3.4", "Inform and support government"),
         none("13.3.5", "Environmental education collaborate with NGO"),
       ]),
@@ -352,32 +352,32 @@ export const sdgData: SDG[] = [
       "T.I.P. supports initiatives for water conservation, pollution prevention, and research that protect marine and freshwater ecosystems, especially in communities affected by environmental degradation and industrial waste.",
     targets: [
       target("14.1", "14.1 Research on life below water", [
-        img("14.1.1", "Life Below Water: CiteScore", "1aC-X7RPJQEGosBDwmximukDaxpe29wbw"),
-        img("14.1.2", "Life Below Water: FWCI (Field-Weighted Citation Impact)", "1aC-X7RPJQEGosBDwmximukDaxpe29wbw"),
-        img("14.1.3", "Life Below Water: publications", "1aC-X7RPJQEGosBDwmximukDaxpe29wbw"),
+        img("14.1.1", "Life Below Water: CiteScore", "1cYumw_I16h1Ddqoi4u-6TKvGpFYDKXDL"),
+        img("14.1.2", "Life Below Water: FWCI (Field-Weighted Citation Impact)", "1cYumw_I16h1Ddqoi4u-6TKvGpFYDKXDL"),
+        img("14.1.3", "Life Below Water: publications", "1cYumw_I16h1Ddqoi4u-6TKvGpFYDKXDL"),
       ]),
       target("14.2", "14.2 Supporting aquatic ecosystems through education", [
-        img("14.2.1", "Fresh-water ecosystems (community outreach)", "1x-7maM7HH1uRU-6iPYfGQ9NYgahLlpBd"),
-        img("14.2.2", "Sustainable fisheries (community outreach)", "1xTR5S7kgCzvEU6RTANz_tVS1vcOvae2h"),
+        img("14.2.1", "Fresh-water ecosystems (community outreach)", "1wFSwY8jCTrCEwZhEBsccxWVnsPtjyakI"),
+        img("14.2.2", "Sustainable fisheries (community outreach)", "1rHbfOMS3LOiSlKG-YzfFVE-wBibPPsTp"),
         none("14.2.3", "Overfishing (community outreach)"),
       ]),
       target("14.3", "14.3 Supporting aquatic ecosystems through action", [
-        img("14.3.1", "Conservation and sustainable utilisation of the oceans (events)", "1nl-nleCOPzUFPBYvkFB-6J95NDGOQo05"),
+        img("14.3.1", "Conservation and sustainable utilisation of the oceans (events)", "1iQz6RuxAzrNgwfLTN2Fsnt8J1-SH12Ho"),
         none("14.3.2", "Food from aquatic ecosystems (policies)"),
-        img("14.3.3", "Maintain ecosystems and their biodiversity (direct work)", "1ymepsOEItV4zXt9_AqUhsqaEZVQleNFM"),
-        img("14.3.4", "Technologies towards aquatic ecosystem damage prevention (direct work)", "1VGi74fRNjW-JS3F4kxDuyssbGWyMP8ds"),
+        img("14.3.3", "Maintain ecosystems and their biodiversity (direct work)", "1L8LKFw8kBaUas_ca9CeBNoJTWBwr-nDr"),
+        img("14.3.4", "Technologies towards aquatic ecosystem damage prevention (direct work)", "1nuarvr03v3kiIvMuOWJ94EWS7v7cevP8"),
       ]),
       target("14.4", "14.4 Water sensitive waste disposal", [
-        img("14.4.1", "Water discharge guidelines and standards", "1MB0bDEu3i_WqK-5O61IWDc9oovrdjGrm"),
-        img("14.4.2", "Action plan to reducing plastic waste", "1Ipc0gxeikDcHlYCuUvogGOzhnOOjLv5F"),
-        img("14.4.3", "Reducing marine pollution (policy)", "1J354xk2KRA9J12BzdJdPuIEt3ekm_mLQ"),
+        img("14.4.1", "Water discharge guidelines and standards", "1ECkB4SDv8NhH-LVDJGkM-XM2Yq5AQlGI"),
+        img("14.4.2", "Action plan to reducing plastic waste", "1pg11iZX0dUXFNevTNuIU8zrX0DBTYRsA"),
+        img("14.4.3", "Reducing marine pollution (policy)", "17E0mO-DV1SpFZfcDM3qAp-GfQ-ExGAHS"),
       ]),
       target("14.5", "14.5 Maintaining a local ecosystem", [
         none("14.5.1", "Minimizing alteration of aquatic ecosystems (plan)"),
         none("14.5.2", "Monitoring the health of aquatic ecosystems"),
         review("14.5.3", "Programmes towards good aquatic stewardship practices"),
-        img("14.5.4", "Collaboration for shared aquatic ecosystems", "1bfTwfIWxIfJ7IOlSKaQ5XmSdB_t38LoD"),
-        img("14.5.5", "Watershed management strategy", "13dUc2FxfuD9edYkcEg--B4ICBJRT9FqW"),
+        img("14.5.4", "Collaboration for shared aquatic ecosystems", "1zcajeILjvzWiyroxff3y4K7JrQYPrjOP"),
+        img("14.5.5", "Watershed management strategy", "1l_ESTMMbsvJDl3CFMPmwsyH8Cd8_UO-R"),
       ]),
     ],
   },
@@ -403,11 +403,11 @@ export const sdgData: SDG[] = [
       ]),
       target("16.2", "16.2 University governance measures", [
         none("16.2.1", "Elected representation"),
-        doc("16.2.2", "Students' union", "1h_QSCOn2Pli8a7zqVoauaLrDpR3vpmj7"),
-        doc("16.2.3", "Identify and engage with local stakeholders", "1U7v4fatmURNsXQ4tnlKU6s1BPRlizkps"),
-        doc("16.2.4", "Participatory bodies for stakeholder engagement", "1CSF11wciA6MVQ3rtaopCMhNhDbX0i6-k"),
-        doc("16.2.5", "University principles on bribery and corruption", "1mHSvnZZ-Gh8MBNGUd_GaSiafqTkTtjtG"),
-        doc("16.2.6", "Academic freedom policy", "1UouyAuIiZjXXtlNgdoru6cR0DGvKGx9o"),
+        doc("16.2.2", "Students' union", "1izqu-ZfNQrlTx9eJL5b4dbi2fpab_awg"),
+        doc("16.2.3", "Identify and engage with local stakeholders", "1dP-hmsFa3eETzwtcLgi_SrV-X1FG2kPG"),
+        doc("16.2.4", "Participatory bodies for stakeholder engagement", "1jp9w0n9DjqYbDbhbH8nYkx7w4yYUrbT8"),
+        doc("16.2.5", "University principles on bribery and corruption", "1cbCJvggIGJXDuV7ko86gECpFRjIefvvD"),
+        doc("16.2.6", "Academic freedom policy", "1uCUh16K-1dTTOA7pw_nQKX50RWgYQjts"),
         none("16.2.7", "Publish financial data"),
       ]),
       target("16.3", "16.3 Working with government", [

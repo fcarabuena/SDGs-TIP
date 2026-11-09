@@ -35,8 +35,8 @@ Where one document covers several indicators, give each indicator the same file 
 
 ## Adding evidence
 
-1. Copy the final document into the **Public evidence (used by website)** folder of the Drive snapshot. Link to the copy, not the original, so later edits to the original don't change the site.
-2. Confirm the file is set to **Anyone with the link: Viewer**. Files in that folder inherit this setting.
+1. Copy the final document into the T.I.P. Drive folder **SDGs_TIP**, which is public. Link to the copy, not the original, so later edits to the original don't change the site.
+2. Confirm the file is set to **Anyone with the link: Viewer**. Files in that folder inherit this setting. Internal files go in its **Private** subfolder, which does not.
 3. Update the indicator in `data/sdg-data.ts`, for example changing `review(...)` to `doc(...)`.
 4. Run `npm run check:links` and `npm run build`.
 5. Merge to `main` to publish.
