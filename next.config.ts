@@ -1,6 +1,6 @@
 import type { NextConfig } from "next"
 
-// GitHub Pages serves the site from /SDGs-TIP; the deploy workflow sets this. Local runs leave it empty.
+// Only needed when the site is served from a subpath, as on GitHub Pages. Render serves it from the root.
 const basePath = process.env.PAGES_BASE_PATH ?? ""
 
 const nextConfig: NextConfig = {

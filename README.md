@@ -29,10 +29,8 @@ npm run build
 
 ## Hosting
 
-The site is a static export hosted free on GitHub Pages at <https://fcarabuena.github.io/SDGs-TIP/>.
+The site is a static export hosted as a [Render static site](https://render.com/docs/static-sites). [`render.yaml`](render.yaml) holds the settings, and Render rebuilds and publishes the site on every push to `main`. The build fails, leaving the live site unchanged, if `npm run check:data` finds a problem.
 
-Every push to `main` runs [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml), which validates the data, builds the site, and publishes it.
+First-time setup: in the Render Dashboard, choose **New > Blueprint**, connect this repository, and apply.
 
-First-time setup: in the repository's **Settings > Pages**, set **Source** to **GitHub Actions**.
-
-If the repository is renamed or moved, the workflow picks up the new name automatically.
+GitHub Pages also works as a fallback. Set **Settings > Pages > Source** to **GitHub Actions**, then run the **Deploy to GitHub Pages** workflow manually.
