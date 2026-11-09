@@ -1,11 +1,18 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: 'export', // Enables static export
-  images: {
-    unoptimized: true, // Disables server-side image optimization
-  },
-  // If your site is hosted at username.github.io/repository-name, add the subpath:
-  // basePath: '/repository-name',
-};
+import type { NextConfig } from "next"
 
-module.exports = nextConfig;
+// Only needed when the site is served from a subpath, as on GitHub Pages. Render serves it from the root.
+const basePath = process.env.PAGES_BASE_PATH ?? ""
+
+const nextConfig: NextConfig = {
+  output: "export",
+  basePath,
+  trailingSlash: true,
+  images: {
+    unoptimized: true,
+  },
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
+  },
+}
+
+export default nextConfig

@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { assetPath } from "@/lib/asset-path"
 
 export default function AboutSection() {
   return (
@@ -27,7 +28,7 @@ export default function AboutSection() {
         <div className="grid">
           <div className="bg-white rounded-lg border-2 border-gray-200 group cursor-pointer hover:shadow-lg hover:border-[#f6c445] hover:scale-105 transition-all duration-300">
             <Image
-              src="/contents/SDG.png"
+              src={assetPath("/contents/SDG.png")}
               alt="Sustainable Development Goals"
               width={1200}
               height={675}

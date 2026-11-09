@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# T.I.P. Sustainable Development Goals
 
-## Getting Started
+The Technological Institute of the Philippines' public site for its commitment to the 17 UN Sustainable Development Goals and the evidence behind them.
 
-First, run the development server:
+Visitors choose an SDG, then an indicator, and the evidence document opens in an embedded viewer. **Open in New Tab** opens the file in Google Drive, where they can read or download it.
+
+## Run locally
+
+Needs Node.js 22.18 or newer.
 
 ```bash
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Update the content
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+All content is in [`data/sdg-data.ts`](data/sdg-data.ts). See the [content guide](SDG_PAGES_GUIDE.md) for how to add or change an indicator.
 
-## Learn More
+Before committing:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run check:data    # validates structure and IDs
+npm run check:links   # also confirms an anonymous visitor can open every Drive link
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Hosting
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The site is a static export hosted as a [Render static site](https://render.com/docs/static-sites). [`render.yaml`](render.yaml) holds the settings, and Render rebuilds and publishes the site on every push to `main`. The build fails, leaving the live site unchanged, if `npm run check:data` finds a problem.
 
-## Deploy on Vercel
+First-time setup: in the Render Dashboard, choose **New > Blueprint**, connect this repository, and apply.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+GitHub Pages also works as a fallback. Set **Settings > Pages > Source** to **GitHub Actions**, then run the **Deploy to GitHub Pages** workflow manually.

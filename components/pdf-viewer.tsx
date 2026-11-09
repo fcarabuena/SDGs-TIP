@@ -5,17 +5,20 @@ import { useState } from "react"
 interface PDFViewerProps {
   pdfUrl: string
   title: string
+  fileType?: "pdf" | "image"
 }
 
 /**
- * PDF Viewer component that displays Google Drive PDFs
+ * Document viewer that displays Google Drive PDFs and images
  * Converts Google Drive links to embedded view format
- * @param pdfUrl - Google Drive PDF link
- * @param title - Title of the PDF document
+ * @param pdfUrl - Google Drive file link
+ * @param title - Title of the document
+ * @param fileType - Whether the file is a PDF (default) or an image
  */
-export default function PDFViewer({ pdfUrl, title }: PDFViewerProps) {
+export default function PDFViewer({ pdfUrl, title, fileType = "pdf" }: PDFViewerProps) {
   const [isLoading, setIsLoading] = useState(true)
   const [hasError, setHasError] = useState(false)
+  const documentLabel = fileType === "image" ? "document" : "PDF"
 
   /**
    * Converts Google Drive sharing link to embedded preview URL with fit parameters
@@ -57,7 +60,7 @@ export default function PDFViewer({ pdfUrl, title }: PDFViewerProps) {
         <div className="flex items-center gap-3">
           <span className="text-2xl">📄</span>
           <div>
-            <p className="text-sm font-medium text-[#292929]">PDF Document</p>
+            <p className="text-sm font-medium text-[#292929]">{fileType === "image" ? "Document" : "PDF Document"}</p>
             <p className="text-xs text-[#292929]/60">{title}</p>
           </div>
         </div>
@@ -78,7 +81,7 @@ export default function PDFViewer({ pdfUrl, title }: PDFViewerProps) {
           <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
             <div className="text-center">
               <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#f6c445] mx-auto mb-4"></div>
-              <p className="text-[#292929]/60">Loading PDF...</p>
+              <p className="text-[#292929]/60">Loading {documentLabel}...</p>
             </div>
           </div>
         )}
@@ -87,9 +90,9 @@ export default function PDFViewer({ pdfUrl, title }: PDFViewerProps) {
           <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
             <div className="text-center p-8">
               <span className="text-6xl mb-4 block">⚠️</span>
-              <p className="text-[#292929] font-semibold mb-2">Unable to load PDF</p>
+              <p className="text-[#292929] font-semibold mb-2">Unable to load {documentLabel}</p>
               <p className="text-sm text-[#292929]/60 mb-4">
-                The PDF could not be displayed in the browser.
+                The {documentLabel} could not be displayed in the browser.
               </p>
               <a
                 href={pdfUrl}
@@ -117,7 +120,7 @@ export default function PDFViewer({ pdfUrl, title }: PDFViewerProps) {
 
       {/* Alternative Link */}
       <div className="text-center text-sm text-[#292929]/60">
-        If the PDF doesn't display correctly,{" "}
+        If the {documentLabel} doesn&apos;t display correctly,{" "}
         <a
           href={pdfUrl}
           target="_blank"
