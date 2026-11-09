@@ -1,144 +1,48 @@
-# SDG Individual Pages Guide
+# SDG Content Guide
 
-## Overview
-The application now features individual pages for each SDG and their indicators with PDF viewing capabilities.
+## Pages
 
-## Page Structure
+| Route | Example | Shows |
+|---|---|---|
+| `/` | | Institutional commitment and a grid of all 17 SDGs |
+| `/sdg/[number]` | `/sdg/6` | The commitment statement, targets, and indicators |
+| `/sdg/[number]/[indicator id]` | `/sdg/6/sdg-6-1-3` | The evidence document in an embedded viewer |
 
-### 1. Home Page (`/`)
-- Displays a grid of all 17 SDGs
-- Each SDG card links to its individual page
-- Includes the "Institutional Commitment" section
-- Features the sidebar navigation
+An indicator only gets its own page, and a sidebar entry, if it has published evidence.
 
-### 2. Individual SDG Pages (`/sdg/[id]`)
-**Route Examples:**
-- `/sdg/1` - No Poverty
-- `/sdg/6` - Clean Water and Sanitation
-- `/sdg/17` - Partnerships for the Goals
+## Data structure
 
-**Features:**
-- Full SDG information with all targets and indicators
-- Links to view PDFs for indicators that have them
-- Sidebar navigation for easy access to other SDGs
-- Breadcrumb navigation
-- Footer with T.I.P. logo
-
-### 3. Indicator PDF Pages (`/sdg/[id]/[indicatorId]`)
-**Route Examples:**
-- `/sdg/6/sdg-6-1-1` - Water publications
-- `/sdg/6/sdg-6-1-2` - Water consumption tracking
-- `/sdg/17/sdg-17-1-1` - Relationships with NGOs
-
-**Features:**
-- Embedded PDF viewer showing Google Drive documents
-- Page header with SDG context
-- Breadcrumb navigation (Home → SDG → Indicator)
-- Sidebar navigation
-- Alternative link to open PDF in Google Drive if embed fails
-- Loading and error states
-
-## Components
-
-### PDF Viewer Component (`components/pdf-viewer.tsx`)
-**Props:**
-- `pdfUrl`: Google Drive sharing link
-- `title`: PDF document title
-
-**Features:**
-- Automatically converts Google Drive sharing links to embedded preview URLs
-- Displays loading spinner while PDF loads
-- Shows error message if PDF fails to load
-- Provides "Open in New Tab" button
-- Responsive iframe with minimum height
-
-**URL Conversion:**
-```
-Input:  https://drive.google.com/file/d/FILE_ID/view?usp=sharing
-Output: https://drive.google.com/file/d/FILE_ID/preview
-```
-
-### Updated Sidebar Component (`components/side-bar.tsx`)
-**Features:**
-- Context-aware navigation (different behavior on home vs. SDG pages)
-- Links to individual SDG pages
-- Expandable sections showing indicators with PDFs
-- Direct links to indicator PDF pages
-- Resizable sidebar
-
-## Data Structure
-
-Each SDG can have:
-1. **Targets** - Major goals (e.g., "6.3 Water usage and care")
-2. **Indicators** - Specific metrics (e.g., "6.3.1 Wastewater treatment")
-
-Both targets and indicators can have:
-- `title`: Display name
-- `link`: Google Drive PDF URL
-- `description`: Text description
-
-## Navigation Flow
+Everything is in `data/sdg-data.ts`:
 
 ```
-Home (/)
-  ↓
-SDG Page (/sdg/1)
-  ↓
-Indicator PDF Page (/sdg/1/sdg-1-1-1)
+SDG (number, title, statement)
+└── Target (id, title)
+    └── Indicator (id, title, and either link or status)
 ```
 
-Users can:
-1. Browse all SDGs on the home page
-2. Click an SDG to see its full details
-3. Click "View PDF" buttons to see indicator PDFs
-4. Use sidebar to navigate between SDGs
-5. Use breadcrumbs to navigate back
+Add indicators with these helpers. The first argument is the indicator number, and the ID and title are built from it.
 
-## Adding New PDF Links
+| Helper | Use for | Site shows |
+|---|---|---|
+| `doc("2.2.1", "Name", "DRIVE_FILE_ID")` | A PDF | "View PDF" button |
+| `img("14.2.1", "Name", "DRIVE_FILE_ID")` | An image | "View Document" button |
+| `none("2.1.1", "Name")` | No evidence in the source | "No evidence published" |
+| `review("2.5.3", "Name")` | Evidence being corrected | "Evidence being updated" |
 
-To add a PDF to an indicator in `data/sdg-data.ts`:
+The Drive file ID is the part of the link between `/d/` and `/view`.
 
-```typescript
-{
-  id: "sdg-6-1-1",
-  title: "6.1.3 Clean Water and Sanitation: publications",
-  link: "https://drive.google.com/file/d/FILE_ID/view?usp=sharing",
-  description: "Description text..."
-}
-```
+Where one document covers several indicators, give each indicator the same file ID. For example, 4.1.1, 4.1.2, and 4.1.3 all open the same PDF.
 
-The PDF will automatically:
-- Appear as a "View PDF" button on the SDG page
-- Create a dedicated page at `/sdg/6/sdg-6-1-1`
-- Show in the sidebar under the SDG section
+## Adding evidence
 
-## Styling
+1. Copy the final document into the **Public evidence (used by website)** folder of the Drive snapshot. Link to the copy, not the original, so later edits to the original don't change the site.
+2. Confirm the file is set to **Anyone with the link: Viewer**. Files in that folder inherit this setting.
+3. Update the indicator in `data/sdg-data.ts`, for example changing `review(...)` to `doc(...)`.
+4. Run `npm run check:links` and `npm run build`.
+5. Merge to `main` to publish.
 
-**Color Scheme:**
-- Primary: `#f6c445` (Gold/Yellow)
-- Text: `#292929` (Dark Gray)
-- Background: White
-- Borders: Gray-200
+## Do not publish
 
-**Responsive Design:**
-- Mobile-first approach
-- Grid layouts adjust for different screen sizes
-- PDF viewer maintains minimum height on mobile
-- Sidebar can be resized on desktop
-
-## Error Handling
-
-1. **Invalid SDG ID**: Shows "SDG Not Found" message
-2. **Invalid Indicator ID**: Shows "Indicator Not Found" message
-3. **PDF Load Failure**: Shows error message with link to Google Drive
-4. **Missing PDF Link**: Indicator shown without PDF button
-
-## Future Enhancements
-
-Potential improvements:
-- [ ] Add search functionality across SDGs
-- [ ] Add filtering by target/indicator
-- [ ] Implement PDF download functionality
-- [ ] Add print-friendly views
-- [ ] Add sharing buttons for social media
-- [ ] Implement progress tracking for SDG completion
+- Staff names and "responsibility" columns from the source sheets
+- Self-assessment scores and ratings
+- Indicator 8.3.1 (Expenditure per employee), unless publication is approved

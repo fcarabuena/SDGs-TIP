@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation"
 import { sdgData } from "@/data/sdg-data"
 import { useState, useRef, useEffect } from "react"
 import { useSidebar } from "@/contexts/sidebar-context"
+import { assetPath } from "@/lib/asset-path"
 
 interface SidebarProps {
   onNavigate?: (sectionId: string) => void
@@ -172,7 +173,7 @@ export default function Sidebar({ onNavigate }: SidebarProps) {
           <div className="p-4 border-b border-gray-200 sticky top-0 bg-white z-20">
             <div className="h-20 relative w-full max-w-40">
               <Image
-                src="/contents/T.I.P. Logo HD.png"
+                src={assetPath("/contents/T.I.P. Logo HD.png")}
                 alt="T.I.P. Logo"
                 fill
                 className="object-contain object-left"
@@ -201,11 +202,9 @@ export default function Sidebar({ onNavigate }: SidebarProps) {
 
             {sdgData.map((sdg) => {
               const isExpanded = expandedSDGs.has(sdg.id)
-              // Check if SDG has any titles (target or indicator titles)
-              const hasAnyTitles = sdg.targets.some(
-                (target) =>
-                  (target.title && target.link) ||
-                  target.indicators.some((indicator) => indicator.title && indicator.link)
+              // Only indicators with published evidence appear in the sidebar
+              const hasAnyTitles = sdg.targets.some((target) =>
+                target.indicators.some((indicator) => indicator.link)
               )
 
               return (
@@ -244,25 +243,19 @@ export default function Sidebar({ onNavigate }: SidebarProps) {
                   {isExpanded && hasAnyTitles && (
                     <div className="ml-3 mt-1 space-y-0.5 border-l border-gray-200 pl-3 animate-in fade-in duration-200">
                       {sdg.targets.map((target) => {
-                        const hasTargetTitle = target.title && target.link
-                        const hasIndicatorTitles = target.indicators.some(
-                          (indicator) => indicator.title && indicator.link
-                        )
+                        const hasIndicatorTitles = target.indicators.some((indicator) => indicator.link)
 
                         return (
                           <div key={target.id}>
-                            {hasTargetTitle && (
-                              <Link
-                                href={`/sdg/${sdg.number}/${target.id}`}
-                                className="text-[12px] text-[#292929]/80 py-1.5 font-semibold uppercase tracking-wide hover:text-[#f6c445] hover:bg-gray-100 transition-colors w-full text-left px-2 rounded leading-tight wrap-break-word block"
-                              >
+                            {target.title && hasIndicatorTitles && (
+                              <p className="text-[12px] text-[#292929]/80 py-1.5 font-semibold uppercase tracking-wide w-full text-left px-2 leading-tight wrap-break-word">
                                 {target.title}
-                              </Link>
+                              </p>
                             )}
                             {hasIndicatorTitles && (
                               <div className="ml-1 space-y-0.5">
                                 {target.indicators.map((indicator) => {
-                                  if (!indicator.title || !indicator.link) return null
+                                  if (!indicator.link) return null
                                   return (
                                     <Link
                                       key={indicator.id}
