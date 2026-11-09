@@ -1,6 +1,14 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react"
+
+// Google's viewer draws PDFs about 800px wide however large its frame is, leaving black bars on
+// wider frames. It can't be zoomed from outside, so the frame is loaded just wider than the
+// document and scaled up to fill the available space.
+const VIEWER_WIDTH = 830
+// Image evidence is about this wide relative to its height. Google fits images to the frame's
+// height, so the frame takes the same shape to fill its width.
+const IMAGE_ASPECT_RATIO = 1.37
 
 interface PDFViewerProps {
   pdfUrl: string
@@ -19,6 +27,30 @@ export default function PDFViewer({ pdfUrl, title, fileType = "pdf" }: PDFViewer
   const [isLoading, setIsLoading] = useState(true)
   const [hasError, setHasError] = useState(false)
   const documentLabel = fileType === "image" ? "document" : "PDF"
+  const frameBoxRef = useRef<HTMLDivElement>(null)
+  const [boxSize, setBoxSize] = useState({ width: 0, height: 0 })
+
+  useEffect(() => {
+    const box = frameBoxRef.current
+    if (!box) return
+    const observer = new ResizeObserver(() => {
+      setBoxSize({ width: box.clientWidth, height: box.clientHeight })
+    })
+    observer.observe(box)
+    return () => observer.disconnect()
+  }, [])
+
+  // Narrow screens use the frame as is, because Google's viewer already fits itself to them.
+  const scale = boxSize.width / VIEWER_WIDTH
+  const frameStyle =
+    scale > 1
+      ? {
+          width: `${VIEWER_WIDTH}px`,
+          height: `${boxSize.height / scale}px`,
+          transform: `scale(${scale})`,
+          transformOrigin: "0 0",
+        }
+      : { width: "100%", height: "100%" }
 
   /**
    * Converts Google Drive sharing link to embedded preview URL with fit parameters
@@ -76,7 +108,15 @@ export default function PDFViewer({ pdfUrl, title, fileType = "pdf" }: PDFViewer
       </div>
 
       {/* PDF Viewer */}
-      <div className="relative w-full bg-gray-100 rounded-lg overflow-hidden shadow-lg">
+      <div
+        ref={frameBoxRef}
+        className="relative w-full bg-gray-100 rounded-lg overflow-hidden shadow-lg"
+        style={
+          fileType === "image"
+            ? { aspectRatio: IMAGE_ASPECT_RATIO }
+            : { height: "calc(100vh - 300px)", minHeight: "600px" }
+        }
+      >
         {isLoading && (
           <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
             <div className="text-center">
@@ -109,8 +149,8 @@ export default function PDFViewer({ pdfUrl, title, fileType = "pdf" }: PDFViewer
 
         <iframe
           src={embedUrl}
-          className="w-full border-0"
-          style={{ height: "calc(100vh - 300px)", minHeight: "600px" }}
+          className="block border-0"
+          style={frameStyle}
           title={title}
           onLoad={handleIframeLoad}
           onError={handleIframeError}
